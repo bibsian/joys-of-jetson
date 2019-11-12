@@ -32,8 +32,7 @@ pip3 install numpy $TORCH_WHL && rm $TORCH_WHL
 sudo apt-get -y install libjpeg-dev zlib1g-dev
 echo 'Starting TorchVision Build - will take a little bit'
 git clone --branch $TORCH_VISION_VERSION https://github.com/pytorch/vision torchvision \
-&& cd torchvision && sudo python3 setup.py install && cd .. \
-&& rm -r torchvision
+&& cd torchvision && sudo python3 setup.py install && cd ..
 
 # https://stackoverflow.com/questions/23929235/multi-line-string-with-extra-space-preserved-indentation
 ASSERT_SCRIPT=$(cat <<-END
