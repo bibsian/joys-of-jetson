@@ -15,3 +15,21 @@ appendBashrc(){
 	echo "$1 exists in $FILE"
     fi
 }
+
+makeCerts(){
+    if [ ! -d "$HOME/certs" ]; then
+	cd $HOME
+	mkdir certs
+	echo "Certificat directory at $HOME/certs"
+	cd certs
+
+	echo "Configuring openssl"
+	# https://github.com/jupyter/notebook/issues/507#issuecomment-145390380
+	sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycert.pem -out mycert.pem
+	sudo chown $USER:$USER $HOME/certs/mycert.pem
+
+	cd $HOME
+    else
+	ech "$HOME/certs exists already, not creating .pem file"
+    fi
+}
