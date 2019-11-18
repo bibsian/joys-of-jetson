@@ -20,6 +20,9 @@ appendBashrc "WORKON_HOME=$HOME/.virtualenvs"
 appendBashrc 'VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3'
 appendBashrc 'source /usr/local/bin/virtualenvwrapper.sh'
 
+VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3 # In case source ~/.bashrc not working because of scope
+source /usr/local/bin/virtualenvwrapper.sh
+
 mkvirtualenv "$PYTORCH_VIRTUAL_ENV_NAME" -p python3
 workon "$PYTORCH_VIRTUAL_ENV_NAME"
 
