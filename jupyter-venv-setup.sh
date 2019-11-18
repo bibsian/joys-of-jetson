@@ -57,7 +57,7 @@ pip3 install jupyter matplotlib ipykernel
 
 jupyter notebook --generate-config
 jupyter notebook password
-chown $USER:$USER $HOME/.jupyter #change ownership
+sudo chown $USER:$USER $HOME/.jupyter #change ownership
 
 makeCerts
 
