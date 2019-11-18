@@ -76,7 +76,7 @@ c.NotebookApp.ip = '0.0.0.0'
 c.NotebookApp.open_browser = False  #so that the ipython notebook does not opens up a browser by default
 c.NotebookApp.password = u$JUPYTER_PWD  #the encrypted password we generated above
 # Set the port to 8888, the port we set up in the AWS EC2 set-up
-c.NotebookApp.port = 8889
+c.NotebookApp.port = 8888
 
 # Configuration file for jupyter-notebook.
 c.Notebook.allow_origin='*'
